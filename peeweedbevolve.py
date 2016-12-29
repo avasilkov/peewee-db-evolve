@@ -556,7 +556,7 @@ def _confirm(db, to_run):
   print()
   while True:
     print('Do you want to run %s? (%s)' % (('these commands' if len(to_run)>1 else 'this command'), ('type yes, no or test' if is_postgres(db) else 'yes or no')), end=' ')
-    response = raw_input().strip().lower()
+    response = input().strip().lower()
     if response=='yes' or (is_postgres(db) and response=='test'):
       break
     if response=='no':
